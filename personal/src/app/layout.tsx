@@ -26,7 +26,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body style={{backgroundColor: '#0a0a0a', color: '#ededed'}} className={`${geistSans.variable} ${geistMono.variable}`}>
 
         <Nav />
         {children}
