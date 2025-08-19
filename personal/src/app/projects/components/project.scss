@@ -1,0 +1,107 @@
+.product-section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  column-gap: 3vw;
+  grid-template-rows: auto;
+  flex-direction: row;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  margin-bottom: 15vh;
+
+  .left {
+    align-self: flex-start;
+    padding: 2vw;
+    // animation: slideInRight 1.5s ease-out forwards;
+
+    .product-title {
+      font-family: Outfit, sans-serif;
+      font-weight: bold;
+    }
+
+    .product-description {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: 1vw;
+      margin-top: 0.5vw;
+      font-color: gray;
+      line-height: 3vh;
+    }
+
+    button {
+      margin-top: 2vh;
+      color: black;
+      border-color: black;
+    }
+  }
+
+  .right {
+    width: 100%;
+    padding: 2vw;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    // animation: slideInLeft 1.5s ease-out forwards;
+
+    .image-container {
+      figcaption {
+        margin-top: 0.5vw;
+        font-family: Roboto, sans-serif;
+        font-size: 0.8vw;
+        font-style: italic;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+}
+
+/* 🔽 Mobile styles for screens <= 768px */
+@media (max-width: 768px) {
+  .product-section {
+    display: flex;
+    flex-direction: column;
+    padding: 5vw;
+    row-gap: 4vh;
+
+    .left {
+      padding: 4vw;
+
+      .product-title {
+        font-size: 10vw!important;
+      }
+
+      .product-description {
+        font-size: 3.5vw!important;
+      }
+
+      button {
+        font-size: 4vw;
+        padding: 2vw 4vw;
+      }
+    }
+
+    .right {
+      padding: 0;
+
+      .image-container {
+        width: 100%;
+
+        figcaption {
+          font-size: 3vw;
+          text-align: center;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
