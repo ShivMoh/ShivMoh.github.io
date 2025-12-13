@@ -35,14 +35,14 @@ export default function VideoScroll() {
 
   // Enable arrow-key horizontal scrolling
   useEffect(() => {
-    const handleKeyDown = (e) => {
+    const handleKeyDown = (e : any) => {
       if (!scrollRef.current) return;
 
       if (e.key === "ArrowRight") {
-        scrollRef.current.scrollBy({ left: 400, behavior: "smooth" });
+        (scrollRef.current as any).scrollBy({ left: 400, behavior: "smooth" });
       }
       if (e.key === "ArrowLeft") {
-        scrollRef.current.scrollBy({ left: -400, behavior: "smooth" });
+        (scrollRef.current as any).scrollBy({ left: -400, behavior: "smooth" });
       }
     };
 
