@@ -2,9 +2,12 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import VideoScroll from './components/video-scroll';
+import { title } from 'process';
 
 export default function MasonryImageList() {
-  return (
+  return <>
+    <VideoScroll></VideoScroll>
     <Box mt={'2vh'}>
       <ImageList variant="masonry" cols={3} gap={8}>
         {itemData.map((item) => (
@@ -19,15 +22,10 @@ export default function MasonryImageList() {
         ))}
       </ImageList>
     </Box>
-  );
+  </>;
 }
 
 const itemData = [
-
-  {
-    img: 'innovation_challenge.jpg',
-    title: 'Blinds',
-  },
   {
     img: 'lcoy_panel.jpg',
     title: 'Me at a panel',
@@ -37,12 +35,12 @@ const itemData = [
     title: 'Books',
   },
   {
-    img: 'innovation_opening.jpg',
+    img: 'innovation_challenge.jpg',
     title: 'Blinds',
   },
   {
-    img: 'women.jpeg',
-    title: 'Something',
+    img: 'innovation_opening.jpg',
+    title: 'Blinds',
   },
   {
     img: 'science_fair.jpeg',
@@ -64,4 +62,28 @@ const itemData = [
     img: 'csod.jpeg',
     title: 'Doors',
   },
+  {
+    img: 'ai_4d_event.jpeg',
+    title: 'AI For 4D Event',
+  },
+  {
+    img: 'fao_sldm_closing.jpeg',
+    title: 'Sustainable Lands, Development and Management Project',
+  },
+  {
+    img: 'career_day_2024.jpeg',
+    title: 'Career Day 2024',
+  },
+  {
+    img : 'social_robotics_2024.jpeg',
+    title: 'Social Robotics Workshop 2024',
+  },
+  {
+    img: '3d_printing_workshop.jpg',
+    title: '3D Printing Workshop',
+  },
+  {
+    img: 'social_robotics_workshop.jpg',
+    title: 'Social Robotics Workshop'
+  }
 ];
