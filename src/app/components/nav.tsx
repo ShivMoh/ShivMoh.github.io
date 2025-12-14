@@ -18,10 +18,11 @@ export default function Nav() {
       }}
     >
 
-      <Link href="/portfolio" underline="hover" color="white">Home</Link>
-      <Link href="/portfolio/about" underline="hover" color="white">About</Link>
-      <Link href="/portfolio/projects" underline="hover" color="white">Projects</Link>
-      <Link href="/portfolio/organizations" underline="hover" color="white">Organizations</Link>
+      <Link href="/" underline="hover" color="white">Home</Link>
+      <Link href="/gallery" underline="hover" color="white">Gallery</Link>
+      <Link href="/about" underline="hover" color="white">About</Link>
+      <Link href="/projects" underline="hover" color="white">Projects</Link>
+      <Link href="/organizations" underline="hover" color="white">Organizations</Link>
     </Box>
   </>
 }
