@@ -41,7 +41,7 @@ export default function Page() {
       </div>
       <div className="right-side">
         <div className="image-container spinning-image">
-          <Image style={{width: '500px'}} src="photo_transparent.png" alt="A picture of me"></Image>
+          <Image width={500} height={700} src="photo_transparent.png" alt="A picture of me"></Image>
         </div>
       </div>
     </div>
