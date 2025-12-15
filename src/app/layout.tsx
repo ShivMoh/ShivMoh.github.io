@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "./landing.scss";
 import Nav from "./components/nav";
 
 const geistSans = Geist({
@@ -26,8 +27,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body style={{backgroundColor: '#0a0a0a', color: '#ededed'}} className={`${geistSans.variable} ${geistMono.variable}`}>
-
+      <body className={`${geistSans.variable} ${geistMono.variable} landing-root`} >
         <Nav />
         {children}
       </body>

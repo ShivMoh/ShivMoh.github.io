@@ -23,6 +23,7 @@ export default function Nav() {
       <Link href="/about" underline="hover" color="white">About</Link>
       <Link href="/projects" underline="hover" color="white">Projects</Link>
       <Link href="/organizations" underline="hover" color="white">Organizations</Link>
+      <Link href="/terminal" underline="hover" color="white">Terminal</Link>
     </Box>
   </>
 }

@@ -1,50 +1,30 @@
-"use client";
-
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import VideoScroll from './components/video-scroll';
-import { title } from 'process';
-import './home.scss';
-import Image from 'next/image';
+import Nav from './components/nav';
+import Link from 'next/link';
+import './landing.scss';
 
 export default function Page() {
-  const [showContent, setShowContent] = React.useState(false);
+  return (
+      <section className="landing-hero">
+        <div className="hero-content">
+          <div className="content-wrap">
+            <h1 className="name">Shivesh Mohamed</h1>
+            <p className="role">Software Developer & Engineer</p>
+            <p className="pitch">Building high-performance systems, delightful interfaces, and intelligent solutions. Passionate about web development, machine learning, game development, and exploring new frontiers in tech.</p>
 
-  React.useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowContent(true);
-    }, 3500); // 2s typing + 1.4s dots animation + 0.1s buffer
+            <div className="cta-row">
+              <Link href="/gallery" className="btn primary">View Gallery</Link>
+              <Link href="/projects" className="btn ghost">View Projects</Link>
+            </div>
 
-    return () => clearTimeout(timer);
-  }, []);
-
-  return <>
-    <div className="main-container">
-      <div className="left-side">
-        {!showContent ? (
-          <div className="initializing-loader">
-            <span className="initializing-text">Initializing</span>
-            <span className="initializing-dots">.</span>
-            <span className="initializing-dots">.</span>
-            <span className="initializing-dots">.</span>
+            <div className="skill-list">
+              <span className="skill">Neovim</span>
+              <span className="skill">React / Next.js</span>
+              <span className="skill">Python / ML</span>
+              <span className="skill">C++ / Game Dev</span>
+            </div>
           </div>
-        ) : (
-          <div className="info">
-            <h1>Hello World. Im Shivesh</h1>
-            <p>Im a programmer and software engineer who likes to build cool things</p>
-            <p>My interests are varied, from game programming, to web development to machine learning. I enjoy exploring new areas and acquiring new skills</p>
-            <p>Feel free to explore my website to learn more about me and my work!</p>
-          </div>
-        )}
-      </div>
-      <div className="right-side">
-        <div className="image-container spinning-image">
-          <Image width={500} height={700} src="photo_transparent.png" alt="A picture of me"></Image>
         </div>
-      </div>
-    </div>
-  </>;
+      </section>
+  );
 }
 
