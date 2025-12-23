@@ -15,7 +15,7 @@ export default function Page() {
 
     return <>
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-            <Link href={"/"}>Hi I've made some changes, please click here to go home</Link>
+            <Link href={"/"}>Hi Ive made some changes, please click here to go home</Link>
         </div>
     </>
 }

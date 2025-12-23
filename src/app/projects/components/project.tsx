@@ -2,6 +2,7 @@
 import { motion } from "motion/react";
 import { Link } from "@mui/material";
 import "./project.scss";
+import Image from "next/image";
 
 export default function Project({title, description, image, imageDescription, links} : any) {
     return <>
@@ -14,7 +15,7 @@ export default function Project({title, description, image, imageDescription, li
             viewport={{ once: true, amount: 0.2 }}
             className="right">
             <figure className="image-container">
-              <img src={image} alt={imageDescription} />
+              <Image src={image} alt={imageDescription} />
               <figcaption aria-label="Description of the product image">{imageDescription}</figcaption>
             </figure>
           </motion.div>

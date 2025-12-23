@@ -1,6 +1,7 @@
 "use client"
 import { motion } from "motion/react";
 import "./about.scss"
+import Image from "next/image";
 
 export default function Page() {
   return <>
@@ -32,7 +33,7 @@ export default function Page() {
         viewport={{ once: true, amount: 0.2 }}
         className="right">
         <figure className="image-container">
-          <img src="/arduino.jpeg" alt="This is an image showcasing the service" />
+          <Image src="/arduino.jpeg" alt="This is an image showcasing the service" />
           <figcaption aria-label="Description of the product image">Arduino Project Budilding</figcaption>
         </figure>
       </motion.div>
