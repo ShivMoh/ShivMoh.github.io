@@ -1,5 +1,18 @@
+import type { Metadata } from "next";
 import { Link } from "@mui/material"
 import Project from "./components/project"
+
+export const metadata: Metadata = {
+  title: "Projects | Shivesh Mohamed",
+  description: "Showcase of my technical projects including Local ITS, Traffic Monitoring, and other full-stack development projects using React, Python, and machine learning.",
+  keywords: ["projects", "portfolio", "ITS", "machine learning", "computer vision", "web development"],
+  openGraph: {
+    title: "Projects | Shivesh Mohamed",
+    description: "Technical projects including Local ITS, Traffic Monitoring, and full-stack development.",
+    url: "https://shivmoh.github.io/projects",
+    type: "website",
+  },
+};
 
 export default function Page() {
   const projects = [

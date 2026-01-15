@@ -1,6 +1,17 @@
-
+import type { Metadata } from "next";
 import { Link } from "@mui/material"
 import Organization from "./components/organization"
+
+export const metadata: Metadata = {
+  title: "Experience | Shivesh Mohamed",
+  description: "My professional experience and involvement with the University of Guyana, robotics club, and game development communities.",
+  openGraph: {
+    title: "Experience | Shivesh Mohamed",
+    description: "Professional experience with University of Guyana, robotics club, and game development.",
+    url: "https://shivmoh.github.io/organizations",
+    type: "website",
+  },
+};
 
 export default function Page() {
   const organizations = [

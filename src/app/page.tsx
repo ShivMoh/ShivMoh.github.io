@@ -1,6 +1,18 @@
+import type { Metadata } from "next";
 import Nav from './components/nav';
 import Link from 'next/link';
 import './landing.scss';
+
+export const metadata: Metadata = {
+  title: "Shivesh Mohamed | Software Developer & Engineer",
+  description: "Shivesh Mohamed - Full-stack developer passionate about web development, machine learning, and game development. Building high-performance systems and delightful interfaces.",
+  openGraph: {
+    title: "Shivesh Mohamed | Software Developer & Engineer",
+    description: "Full-stack developer passionate about web development, machine learning, and game development.",
+    url: "https://shivmoh.github.io",
+    type: "website",
+  },
+};
 
 export default function Page() {
   return (

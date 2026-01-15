@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /private
+
+# Crawl delay
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://shivmoh.github.io/sitemap.xml

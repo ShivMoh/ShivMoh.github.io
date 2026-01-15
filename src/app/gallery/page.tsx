@@ -1,12 +1,24 @@
+import type { Metadata } from "next";
 import { Box, ImageList, ImageListItem } from "@mui/material";
 import VideoScroll from "../components/video-scroll";
+
+export const metadata: Metadata = {
+  title: "Gallery | Shivesh Mohamed",
+  description: "Photo gallery showcasing my experiences, projects, and involvement in tech events, robotics, and game development.",
+  openGraph: {
+    title: "Gallery | Shivesh Mohamed",
+    description: "Photo gallery showcasing experiences in tech events, robotics, and game development.",
+    url: "https://shivmoh.github.io/gallery",
+    type: "website",
+  },
+};
 
 export default function Page() {
 
   const itemData = [
     {
-      img: 'lcoy_panel.jpg',
-      title: 'Me at a panel',
+      img: 'girls_in_tech.jpeg',
+      title: 'Girls In Tech Event'
     },
     {
       img: 'arduino.jpeg',
@@ -65,9 +77,10 @@ export default function Page() {
       title: 'Social Robotics Workshop'
     },
     {
-      img: 'girls_in_tech.jpeg',
-      title: 'Girls In Tech Event'
-    }
+      img: 'lcoy_panel.jpg',
+      title: 'Me at a panel',
+    },
+
   ];
 
   return <>

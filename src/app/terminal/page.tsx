@@ -1,5 +1,6 @@
 "use client";
 
+import type { Metadata } from "next";
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
@@ -8,6 +9,17 @@ import VideoScroll from '../components/video-scroll';
 import { title } from 'process';
 import '../home.scss';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: "Terminal | Shivesh Mohamed",
+  description: "Interactive terminal experience showcasing my work and projects.",
+  openGraph: {
+    title: "Terminal | Shivesh Mohamed",
+    description: "Interactive terminal experience.",
+    url: "https://shivmoh.github.io/terminal",
+    type: "website",
+  },
+};
 
 export default function Page() {
   const [showContent, setShowContent] = React.useState(false);
