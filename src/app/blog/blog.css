@@ -1,80 +1,94 @@
 .blog-page {
-  padding: 5vh 2vw;
-  max-width: 900px;
+  padding: 5vh 4vw;
+  width: 100%;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
 .blog-header {
-  text-align: center;
-  margin-bottom: 4vh;
-}
-
-.blog-header h1 {
   font-size: 2.5rem;
-  margin: 0;
-  font-weight: bold;
+  font-weight: 800;
+  margin: 0 0 4vh 0;
+  color: var(--foreground);
 }
 
 .blog-search-filters {
-  margin-bottom: 4vh;
+  margin-bottom: 5vh;
 }
 
 .blog-entries {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
 }
 
-.blog-entry-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  padding: 1.5rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
+/* Minimalist entry — no box, the title is a simple underlined hyperlink */
+.blog-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.blog-entry-card:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-4px);
-  border-color: rgba(255, 255, 255, 0.2);
+.blog-entry-title {
+  display: inline-block;
+  align-self: flex-start;
+  color: var(--foreground);
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 1px;
+  transition: color 0.2s ease;
 }
 
-.blog-entry-card h3 {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.5rem;
-  font-weight: bold;
+.blog-entry-title:hover {
+  color: var(--accent);
 }
 
 .blog-entry-date {
-  opacity: 0.7;
-  margin-bottom: 1rem;
+  color: var(--ink-muted);
   font-size: 0.9rem;
+  margin: 0;
 }
 
 .blog-entry-excerpt {
-  margin-bottom: 1rem;
+  color: var(--foreground);
   line-height: 1.6;
+  margin: 0.25rem 0 0 0;
+  max-width: 75ch;
 }
 
 .blog-entry-tags {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
+  margin-top: 0.25rem;
 }
 
 .blog-tag {
   display: inline-block;
-  padding: 0.25rem 0.75rem;
+  padding: 0.2rem 0.7rem;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 20px;
-  font-size: 0.85rem;
-  opacity: 0.8;
+  font-size: 0.8rem;
+  color: var(--ink-muted);
 }
 
 .blog-no-posts {
-  text-align: center;
   opacity: 0.6;
-  padding: 2rem;
+  padding: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .blog-page {
+    padding: 4vh 6vw;
+  }
+
+  .blog-header {
+    font-size: 2rem;
+  }
+
+  .blog-entry-title {
+    font-size: 1.35rem;
+  }
 }

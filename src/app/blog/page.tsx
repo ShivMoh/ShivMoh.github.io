@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from 'react'
-import { Box, TextField, Chip, Link, Card, CardContent, Typography, CircularProgress } from "@mui/material"
+import { Box, TextField, Chip, CircularProgress } from "@mui/material"
 import './blog.css'
 
 interface BlogEntry {
@@ -28,7 +28,6 @@ export default function BlogPage() {
         const data = await response.json()
         setEntries(data)
 
-        // Extract all unique tags
         const tags = new Set<string>()
         data.forEach((entry: BlogEntry) => {
           entry.tags.forEach(tag => tags.add(tag))
@@ -61,7 +60,7 @@ export default function BlogPage() {
       )
     }
 
-    filtered.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    filtered = [...filtered].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     setFilteredEntries(filtered)
   }, [searchQuery, selectedTags, entries])
 
@@ -82,18 +81,16 @@ export default function BlogPage() {
   if (loading) {
     return (
       <Box sx={{ display: 'flex', justifyContent: 'center', py: 10 }}>
-        <CircularProgress />
+        <CircularProgress sx={{ color: 'var(--foreground)' }} />
       </Box>
     )
   }
 
   return (
-    <Box sx={{ py: 5, px: 2, maxWidth: '900px', mx: 'auto' }}>
-      <Typography variant="h3" sx={{ mb: 4, textAlign: 'center', fontWeight: 'bold' }}>
-        Blog
-      </Typography>
+    <div className="blog-page">
+      <h1 className="blog-header">Blog</h1>
 
-      <Box sx={{ mb: 4 }}>
+      <div className="blog-search-filters">
         <TextField
           fullWidth
           placeholder="Search blog posts..."
@@ -103,24 +100,17 @@ export default function BlogPage() {
           sx={{
             mb: 3,
             '& .MuiOutlinedInput-root': {
-              color: 'white',
-              '& fieldset': {
-                borderColor: 'rgba(255, 255, 255, 0.3)',
-              },
-              '&:hover fieldset': {
-                borderColor: 'rgba(255, 255, 255, 0.5)',
-              },
+              color: 'var(--foreground)',
+              fontFamily: 'inherit',
+              '& fieldset': { borderColor: 'rgba(255, 255, 255, 0.25)' },
+              '&:hover fieldset': { borderColor: 'rgba(255, 255, 255, 0.45)' },
+              '&.Mui-focused fieldset': { borderColor: 'var(--accent)' },
             },
-            '& .MuiOutlinedInput-input::placeholder': {
-              opacity: 0.5,
-            },
+            '& .MuiOutlinedInput-input::placeholder': { opacity: 0.5 },
           }}
         />
 
-        <Typography variant="body2" sx={{ mb: 2, opacity: 0.8 }}>
-          Filter by tags:
-        </Typography>
-        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 3 }}>
+        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
           {allTags.map(tag => (
             <Chip
               key={tag}
@@ -129,70 +119,37 @@ export default function BlogPage() {
               variant={selectedTags.includes(tag) ? "filled" : "outlined"}
               sx={{
                 cursor: 'pointer',
-                color: selectedTags.includes(tag) ? '#000' : 'white',
-                backgroundColor: selectedTags.includes(tag) ? 'white' : 'transparent',
-                borderColor: 'rgba(255, 255, 255, 0.5)',
+                fontFamily: 'inherit',
+                color: selectedTags.includes(tag) ? '#1d1d1d' : 'var(--foreground)',
+                backgroundColor: selectedTags.includes(tag) ? 'var(--foreground)' : 'transparent',
+                borderColor: 'rgba(255, 255, 255, 0.4)',
                 '&:hover': {
-                  backgroundColor: selectedTags.includes(tag) ? 'white' : 'rgba(255, 255, 255, 0.1)',
+                  backgroundColor: selectedTags.includes(tag) ? 'var(--foreground)' : 'rgba(255, 255, 255, 0.08)',
                 },
               }}
             />
           ))}
         </Box>
-      </Box>
+      </div>
 
       {filteredEntries.length === 0 ? (
-        <Typography sx={{ textAlign: 'center', opacity: 0.6 }}>
-          No blog posts found. Check back soon!
-        </Typography>
+        <p className="blog-no-posts">No blog posts found. Check back soon!</p>
       ) : (
-        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+        <div className="blog-entries">
           {filteredEntries.map(entry => (
-            <Link key={entry.id} href={entry.path} underline="none">
-              <Card
-                sx={{
-                  background: 'rgba(255, 255, 255, 0.05)',
-                  backdropFilter: 'blur(10px)',
-                  border: '1px solid rgba(255, 255, 255, 0.1)',
-                  cursor: 'pointer',
-                  transition: 'all 0.3s ease',
-                  '&:hover': {
-                    background: 'rgba(255, 255, 255, 0.1)',
-                    transform: 'translateY(-4px)',
-                    borderColor: 'rgba(255, 255, 255, 0.2)',
-                  },
-                }}
-              >
-                <CardContent>
-                  <Typography variant="h5" sx={{ mb: 1, fontWeight: 'bold' }}>
-                    {entry.title}
-                  </Typography>
-                  <Typography variant="body2" sx={{ mb: 2, opacity: 0.7 }}>
-                    {formatDate(entry.date)}
-                  </Typography>
-                  <Typography variant="body1" sx={{ mb: 2 }}>
-                    {entry.excerpt}
-                  </Typography>
-                  <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
-                    {entry.tags.map(tag => (
-                      <Chip
-                        key={tag}
-                        label={tag}
-                        size="small"
-                        variant="outlined"
-                        sx={{
-                          color: 'rgba(255, 255, 255, 0.8)',
-                          borderColor: 'rgba(255, 255, 255, 0.3)',
-                        }}
-                      />
-                    ))}
-                  </Box>
-                </CardContent>
-              </Card>
-            </Link>
+            <article className="blog-entry" key={entry.id}>
+              <a href={entry.path} className="blog-entry-title">{entry.title}</a>
+              <p className="blog-entry-date">{formatDate(entry.date)}</p>
+              <p className="blog-entry-excerpt">{entry.excerpt}</p>
+              <div className="blog-entry-tags">
+                {entry.tags.map(tag => (
+                  <span key={tag} className="blog-tag">{tag}</span>
+                ))}
+              </div>
+            </article>
           ))}
-        </Box>
+        </div>
       )}
-    </Box>
+    </div>
   )
 }
