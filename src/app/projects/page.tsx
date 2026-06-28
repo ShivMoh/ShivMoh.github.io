@@ -64,7 +64,7 @@ export default function Page() {
       title: "Virtual Assistant",
       description: "A personal assistant that brings together several machine learning techniques into a single interactive system. It uses a large language model to drive natural conversation flow, a CNN for real time emotion detection, and face detection for user identification (using either a haar classifier or a Facenet based approach). Together these allow the assistant to recognise who it's speaking with, gauge their emotional state, and hold a contextual conversation.",
       images: [
-        { src: "/face.png", description: "Virtual Assistant" }
+        { src: "/placeholder.svg", description: "Virtual Assistant" }
       ],
       tags: ["software", "AI"],
       links: [
