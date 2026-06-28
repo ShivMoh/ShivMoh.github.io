@@ -20,11 +20,11 @@
     }
 
     .product-description {
-      font-family: 'Roboto', sans-serif;
-      font-weight: 500;
+      font-family: var(--font-manrope), 'Segoe UI', system-ui, sans-serif;
+      font-weight: 600;
       font-size: 1vw;
       margin-top: 0.5vw;
-      font-color: gray;
+      color: var(--ink-muted);
       line-height: 3vh;
     }
 
@@ -54,7 +54,9 @@
       }
 
       img {
-        width: 100%;
+        width: 220px;
+        height: auto;
+        object-fit: contain;
       }
     }
   }
@@ -90,16 +92,15 @@
       padding: 0;
 
       .image-container {
-        width: 100%;
-
         figcaption {
           font-size: 3vw;
           text-align: center;
         }
 
         img {
-          width: 100%;
+          width: 180px;
           height: auto;
+          object-fit: contain;
         }
       }
     }

@@ -1,6 +1,10 @@
 :root {
-  --background: #0a0a0a;
+  /* 🎨 Change the overall site background color here — single source of truth */
+  --background: #1d1d1d;
+
   --foreground: #ededed;
+  --ink-muted: #c4bfb6;
+  --accent: #7fb5f0;
 }
 
 html,
@@ -10,9 +14,10 @@ body {
 }
 
 body {
-  color:  #ededed;
-  background:  #0a0a0a;
-  font-family: Arial, Helvetica, sans-serif;
+  color:  var(--foreground);
+  background:  var(--background);
+  font-family: var(--font-manrope), 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-weight: 500;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

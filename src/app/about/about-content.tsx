@@ -32,7 +32,7 @@ export default function AboutContent() {
         viewport={{ once: true, amount: 0.2 }}
         className="right">
         <figure className="image-container">
-          <Image src="/arduino.jpeg" alt="This is an image showcasing the service" />
+          <Image src="/arduino.jpeg" alt="This is an image showcasing the service" width={400} height={300} />
           <figcaption aria-label="Description of the product image">Arduino Project Budilding</figcaption>
         </figure>
       </motion.div>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Blog Post | Shivesh Mohamed</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+                sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: linear-gradient(135deg, #000 0%, #1a1a2e 100%);
+            color: white;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .blog-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 5vh 2vw;
+        }
+
+        .blog-header {
+            margin-bottom: 3rem;
+        }
+
+        .blog-back-link {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            margin-bottom: 1rem;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        .blog-back-link:hover {
+            color: white;
+        }
+
+        .blog-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .blog-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            opacity: 0.7;
+            font-size: 0.95rem;
+        }
+
+        .blog-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .blog-content h2 {
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .blog-content h3 {
+            font-size: 1.4rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            font-weight: bold;
+        }
+
+        .blog-content p {
+            margin-bottom: 1rem;
+        }
+
+        .blog-content code {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+        }
+
+        .blog-content pre {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin-bottom: 1rem;
+        }
+
+        .blog-content pre code {
+            background: none;
+            padding: 0;
+        }
+
+        .blog-content ul,
+        .blog-content ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-content blockquote {
+            border-left: 4px solid rgba(255, 255, 255, 0.3);
+            padding-left: 1rem;
+            margin-left: 0;
+            opacity: 0.8;
+            font-style: italic;
+        }
+
+        .blog-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .blog-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .blog-tag {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            opacity: 0.9;
+            transition: all 0.3s ease;
+        }
+
+        .blog-tag:hover {
+            background: rgba(255, 255, 255, 0.15);
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: 1.8rem;
+            }
+
+            .blog-content {
+                font-size: 1rem;
+            }
+
+            .blog-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-container">
+        <a href="/blog" class="blog-back-link">← Back to Blog</a>
+
+        <header class="blog-header">
+            <h1 class="blog-title">My First Blog Post</h1>
+            <div class="blog-meta">
+                <span>May 18, 2024</span>
+                <span>5 min read</span>
+            </div>
+        </header>
+
+        <main class="blog-content">
+            <p>Welcome to my blog! This is a sample blog post to get you started. You can edit this HTML file to write your own content.</p>
+
+            <h2>Getting Started</h2>
+            <p>To add a new blog post, you'll need to:</p>
+            <ol>
+                <li>Create a new HTML file in the <code>/public/blog/entries/</code> directory</li>
+                <li>Add an entry to the <code>/src/app/blog/entries.json</code> file with metadata</li>
+                <li>Fill in the blog content in the HTML file</li>
+            </ol>
+
+            <h2>Blog Structure</h2>
+            <p>Each blog post is a standalone HTML file. Feel free to customize the styling and add your own CSS. The main blog page will automatically discover and list your posts based on the metadata in <code>entries.json</code>.</p>
+
+            <h3>Metadata Fields</h3>
+            <p>When adding a new blog entry to <code>entries.json</code>, use these fields:</p>
+            <ul>
+                <li><code>id</code> - Unique identifier (kebab-case)</li>
+                <li><code>title</code> - Blog post title</li>
+                <li><code>date</code> - Publication date (YYYY-MM-DD)</li>
+                <li><code>excerpt</code> - Short summary for the listing</li>
+                <li><code>tags</code> - Array of tags for filtering</li>
+                <li><code>path</code> - Path to the HTML file</li>
+            </ul>
+
+            <h2>Example Entry</h2>
+            <p>Here's what an entry in entries.json looks like:</p>
+            <pre><code>{
+  "id": "my-awesome-post",
+  "title": "My Awesome Post",
+  "date": "2024-05-18",
+  "excerpt": "This is a brief description of my post.",
+  "tags": ["tech", "javascript"],
+  "path": "/blog/entries/my-awesome-post.html"
+}</code></pre>
+
+            <h2>Styling Tips</h2>
+            <p>The blog entry pages already have a dark theme that matches your site. You can customize the CSS in the <code>&lt;style&gt;</code> section of your HTML file, or add more complex styling as needed.</p>
+
+            <blockquote>
+                "The only way to learn a new programming language is by writing programs in it." - Dennis Ritchie
+            </blockquote>
+
+            <p>Happy blogging! 🚀</p>
+        </main>
+
+        <div class="blog-tags">
+            <span class="blog-tag">getting-started</span>
+            <span class="blog-tag">sample</span>
+        </div>
+    </div>
+</body>
+</html>

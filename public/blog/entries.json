@@ -1,0 +1,10 @@
+[
+  {
+    "id": "first-blog",
+    "title": "My First Blog Post",
+    "date": "2024-05-18",
+    "excerpt": "A sample blog post to get started with blogging.",
+    "tags": ["getting-started", "sample"],
+    "path": "/blog/entries/first-blog.html"
+  }
+]

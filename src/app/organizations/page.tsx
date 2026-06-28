@@ -16,7 +16,23 @@ export const metadata: Metadata = {
 export default function Page() {
   const organizations = [
     {
-      title : "University of Guyana PACE", 
+      title : "Guyana Lands and Surveys Commission (GLSC)",
+      role: "Software Developer",
+      description: "I currently work as a Software Developer at the Guyana Lands and Surveys Commission, where I build software solutions and work extensively with geospatial data. As part of my role I am currently receiving training in remote sensing using Google Earth Engine, expanding my capabilities in earth observation and spatial analysis.",
+      image: "/glsc_logo.jpeg",
+      imageDescription: "",
+      links: []
+    },
+    {
+      title : "Food and Agriculture Organization (FAO)",
+      role: "National Software Solutions Developer",
+      description: "I worked as a National Software Solutions Developer towards the Sustainable Land Development and Management (SLDM) project. In this role I developed software solutions and was exposed to working with geospatial data in support of the project's land management objectives.",
+      image: "/fao_logo.jpeg",
+      imageDescription: "",
+      links: []
+    },
+    {
+      title : "University of Guyana PACE",
       role: "Assistant Technical Officer",
       description: "A department under the University of Guyana that primarily focuses on event planning ranging from budgeting to technology catering. Under the department I serve as the Assistant Technical Officer responsible for custom web solutions, website management and research on technology recommendations to serve the departments needs",
       image: "/ug.png",

@@ -17,13 +17,10 @@ export default function Nav() {
         },
       }}
     >
-
       <Link href="/" underline="hover" color="white">Home</Link>
       <Link href="/gallery" underline="hover" color="white">Gallery</Link>
-      <Link href="/about" underline="hover" color="white">About</Link>
       <Link href="/projects" underline="hover" color="white">Projects</Link>
       <Link href="/organizations" underline="hover" color="white">Organizations</Link>
-      <Link href="/terminal" underline="hover" color="white">Terminal</Link>
     </Box>
   </>
 }

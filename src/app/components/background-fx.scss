@@ -1,0 +1,59 @@
+.background-fx {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* fade the edges so rows dissolve into the background */
+  mask-image: linear-gradient(to bottom, transparent, #000 12%, #000 88%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 12%, #000 88%, transparent);
+}
+
+.bg-row {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.bg-track {
+  display: inline-block;
+  white-space: nowrap;
+  font-family: var(--font-geist-mono), 'Courier New', monospace;
+  font-weight: 800;
+  font-size: 4.5vw;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(237, 237, 237, 0.035);
+  will-change: transform;
+  animation-name: bg-scroll;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  span {
+    display: inline-block;
+  }
+}
+
+@keyframes bg-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-track {
+    animation: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .bg-track {
+    font-size: 8vw;
+    color: rgba(237, 237, 237, 0.03);
+  }
+}
