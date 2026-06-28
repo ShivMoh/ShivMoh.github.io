@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Blog Post | Shivesh Mohamed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Site palette — keep in sync with --background / --foreground / --accent */
+        :root {
+            --background: #1d1d1d;
+            --foreground: #ededed;
+            --ink-muted: #c4bfb6;
+            --accent: #7fb5f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Manrope', 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-weight: 500;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: var(--background);
+            color: var(--foreground);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .blog-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 5vh 2vw;
+        }
+
+        .blog-header {
+            margin-bottom: 3rem;
+        }
+
+        .blog-back-link {
+            color: var(--ink-muted);
+            text-decoration: none;
+            margin-bottom: 1rem;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        .blog-back-link:hover {
+            color: var(--accent);
+        }
+
+        .blog-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .blog-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            opacity: 0.7;
+            font-size: 0.95rem;
+        }
+
+        .blog-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .blog-content h2 {
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .blog-content h3 {
+            font-size: 1.4rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            font-weight: bold;
+        }
+
+        .blog-content p {
+            margin-bottom: 1rem;
+        }
+
+        .blog-content a {
+            color: var(--accent);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .blog-content code {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+        }
+
+        .blog-content pre {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin-bottom: 1rem;
+        }
+
+        .blog-content pre code {
+            background: none;
+            padding: 0;
+        }
+
+        .blog-content ul,
+        .blog-content ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-content blockquote {
+            border-left: 4px solid rgba(255, 255, 255, 0.3);
+            padding-left: 1rem;
+            margin-left: 0;
+            opacity: 0.8;
+            font-style: italic;
+        }
+
+        .blog-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .blog-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .blog-tag {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            opacity: 0.9;
+            transition: all 0.3s ease;
+        }
+
+        .blog-tag:hover {
+            background: rgba(255, 255, 255, 0.15);
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: 1.8rem;
+            }
+
+            .blog-content {
+                font-size: 1rem;
+            }
+
+            .blog-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-container">
+        <a href="/blog" class="blog-back-link">← Back to Blog</a>
+
+        <header class="blog-header">
+            <h1 class="blog-title">Neural Networks From Scratch Part 1</h1>
+            <div class="blog-meta">
+                <span>Jun 28, 2026</span>
+                <span>20 min read</span>
+            </div>
+        </header>
+
+        <main class="blog-content">
+            <p>
+                Over the past few months I would've started my journey on creating a neural network from 'scratch'. 
+                I'm not doing this from raw c, implementing every mathematical operation to understand the absolute 
+                intricacies of each function invoked. I don't consider think I'm particularly strong in math. 
+                I do like software and programs thought and I enjoy that at the end of the day, that's all this was, a program.
+                Sure, there's lots of math and theory behind how these things work but that's through for any program. Programming
+                by its own nature, from my understanding, has strong fundamentals in mathematics and this is no different I think.
+
+                Of course, I'm no expert so take what I say with a grain of salt. I'm just sharing my own perspective and writing things
+                down I think helps me understand better what I've learnt. Anyways, let's begin.
+            </p>
+
+            <h2>Neural Networks from Scratch</h2>
+            <p>So I would've started by following along the book, Neural Networks from scratch by Harrison Kinsley and Daniel Kukiela.
+                It was really good for helping me understand the fundamentals, especially since it took a strong emphasis on showing code
+                rather than delving too deeply into mathematics (tho there was a fair share of that too!). 
+
+                One thing I liked is that it defined concepts from a more pragmatic perspectice. Specifically I liked how it explained 
+                the concept of a tensor. Now, mathematically I believe that a tensor is a n by n dimensional structure that is the umbrella
+                term for things like vectors and matrices where a vector is a 1D array of numbers and a matrix is a 2D array of numbers.
+
+                Now what I like that while a tensor might have certain nuances, in practice, as the book would've put it bluntly, all
+                a programmer needs to really know is that its an array of N dimensions. And that's kind of it. 
+                
+            </p>
+            <h2>The Simpliest classifer.</h2>
+            <p>So while going through the book was fun and all (I did not finish it entirely, mind you), at the end of the day
+                building something without following exactly what was there is what of course really helped my understanding.
+                My approach was simple, I had claude make the absolute simpliest network for training a classifer
+                on the MNIST dataset for classifying numbers and attempted to recreate that from what I learnt. The book does cover
+                training a classifer on the MNIST dataset but i found that it introduces a lot of tools that aren't really
+                needed to get the most basic classifer up and running. Things like regularisation and momentum were nice concepts
+                to learn but I always like learning the bare minimum to get something working from there so that's what I did.
+            </p>
+            <p>The neural network to recreate was as follows (code is pytorch): 
+<pre><code>class SimplestMNIST(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.flatten = nn.Flatten()
+        self.dense = nn.Linear(784, 10)
+
+    def forward(self, x):
+        x = self.flatten(x)
+        return self.dense(x)
+</code></pre>
+                The notebook I (claude) made can be found here: <a href="https://colab.research.google.com/drive/1qt8ylWP-iEhs8T6hKTb_PuAnLhjYQ3y-?usp=sharing">Simpliest Neural Network classifer</a>
+            </p>
+            <h2>Recreating it from scratch</h2>
+            <p>The code needed to this was a lot less than I thought</p>
+
+        </main>
+
+        <div class="blog-tags">
+            <span class="blog-tag">getting-started</span>
+            <span class="blog-tag">sample</span>
+        </div>
+    </div>
+</body>
+</html>

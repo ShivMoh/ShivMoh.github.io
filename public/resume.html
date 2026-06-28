@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shivesh Mohamed — Resume</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --page-width: 816px;
+      --ink: #111827;
+      --ink-mid: #374151;
+      --ink-light: #6b7280;
+      --accent: #1d4ed8;
+      --rule: #e5e7eb;
+    }
+
+    body {
+      font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+      background: #f3f4f6;
+      color: var(--ink);
+      font-size: 13px;
+      line-height: 1.55;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      width: var(--page-width);
+      margin: 32px auto;
+      background: #ffffff;
+      padding: 48px 52px;
+      box-shadow: 0 4px 24px rgba(0,0,0,.12);
+    }
+
+    /* ── Header ─────────────────────────────── */
+    .header { margin-bottom: 24px; }
+    .header h1 {
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--ink);
+    }
+    .header .title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-top: 2px;
+    }
+    .header .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 18px;
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--ink-light);
+    }
+    .header .contact-row a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* ── Section ─────────────────────────────── */
+    .section { margin-bottom: 22px; }
+    .section-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      border-bottom: 1.5px solid var(--rule);
+      padding-bottom: 4px;
+      margin-bottom: 14px;
+    }
+
+    /* ── Summary ─────────────────────────────── */
+    .summary p { color: var(--ink-mid); }
+
+    /* ── Experience / Education entries ─────── */
+    .entry { margin-bottom: 16px; }
+    .entry:last-child { margin-bottom: 0; }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .entry-org {
+      font-weight: 700;
+      font-size: 13.5px;
+      color: var(--ink);
+    }
+    .entry-period {
+      font-size: 11.5px;
+      color: var(--ink-light);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .entry-role {
+      font-weight: 600;
+      font-size: 12.5px;
+      color: var(--ink-mid);
+      margin-top: 1px;
+    }
+    .entry-location {
+      font-size: 11.5px;
+      color: var(--ink-light);
+      margin-top: 1px;
+      margin-bottom: 6px;
+    }
+    .entry ul {
+      padding-left: 18px;
+      color: var(--ink-mid);
+    }
+    .entry ul li { margin-bottom: 3px; }
+    .entry ul li a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* ── Awards ──────────────────────────────── */
+    .awards-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .awards-table tr { }
+    .award-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink);
+      padding: 4px 0;
+      width: 85%;
+    }
+    .award-period {
+      font-size: 12px;
+      color: var(--ink-light);
+      text-align: right;
+      white-space: nowrap;
+      padding: 4px 0;
+    }
+
+    /* ── Skills ──────────────────────────────── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px 24px;
+    }
+    .skill-group { }
+    .skill-label {
+      font-weight: 600;
+      font-size: 12px;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+    .skill-values {
+      font-size: 12px;
+      color: var(--ink-mid);
+    }
+
+    /* ── Print ───────────────────────────────── */
+    @media print {
+      body { background: white; }
+      .page {
+        width: 100%;
+        margin: 0;
+        padding: 32px 40px;
+        box-shadow: none;
+      }
+    }
+    @page { size: A4; margin: 0; }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ── Header ───────────────────────────────────────────── -->
+  <header class="header">
+    <h1>Shivesh Mohamed</h1>
+    <div class="title">Software Engineer</div>
+    <div class="contact-row">
+      <span>Georgetown, Demerara-Mahaica, Guyana</span>
+      <span>shiveshmohamed1234@gmail.com</span>
+      <a href="https://shivmoh.github.io" target="_blank">shivmoh.github.io</a>
+      <a href="https://www.linkedin.com/in/shivesh-mohamed/" target="_blank">linkedin.com/in/shivesh-mohamed</a>
+    </div>
+  </header>
+
+  <!-- ── Summary ──────────────────────────────────────────── -->
+  <section class="section summary">
+    <div class="section-title">Summary</div>
+    <p>
+      Software engineer with experience building geospatial applications, land administration systems,
+      and web platforms. Interested in deep learning — particularly efficient deep learning and the
+      practical deployment of models in resource-constrained environments. Comfortable across the
+      full stack and with embedded systems (Arduino, Raspberry Pi). Enjoys open source and learning
+      at the boundaries of software and other domains.
+    </p>
+  </section>
+
+  <!-- ── Experience ───────────────────────────────────────── -->
+  <section class="section">
+    <div class="section-title">Experience</div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-org">Guyana Lands and Survey Commission</div>
+        <div class="entry-period">Feb 2026 – Present</div>
+      </div>
+      <div class="entry-role">Software Solutions Developer / Programmer</div>
+      <div class="entry-location">Georgetown, Guyana</div>
+      <ul>
+        <li>Continuous development on internal and external applications with geospatial components.</li>
+        <li>Contributed to data modelling, system design and UI/UX across multiple organisational systems.</li>
+        <li>DevOps and website maintenance.</li>
+        <li>Participated in workshops on practical machine learning for geospatial analysis and remote sensing.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-org">FAO — Sustainable Lands &amp; Development Project</div>
+        <div class="entry-period">Sep 2025 – Dec 2025</div>
+      </div>
+      <div class="entry-role">National Software Solutions Developer / Programmer</div>
+      <div class="entry-location">Georgetown, Guyana</div>
+      <ul>
+        <li>Developed features for the Next Generation Land Management System (NGLMS), a Land Administration and GIS platform.</li>
+        <li>Built functionality for viewing and querying dynamic spatial data.</li>
+        <li>Implemented security systems and protocols based on policy guidelines.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-org">University of Guyana</div>
+        <div class="entry-period">Feb 2023 – Oct 2025</div>
+      </div>
+      <div class="entry-role">Assistant Technical Officer — PACE</div>
+      <div class="entry-location">Turkeyen, Guyana</div>
+      <ul>
+        <li>Lead developer on UGRecruit v1, a platform connecting students with full-time, part-time and internship opportunities — live at <a href="https://ugrecruit.uog.edu.gy/" target="_blank">ugrecruit.uog.edu.gy</a>.</li>
+        <li>Maintained websites under the PACE (Philanthropy, Alumni &amp; Civic Engagement) department.</li>
+        <li>Conducted research and report writing on technologies to support departmental needs.</li>
+        <li>Team <em>Frame Perfect Lite</em> won the UG Innovation Challenge 2025.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-org">University of Guyana Robotics Club</div>
+        <div class="entry-period">2023 – Present</div>
+      </div>
+      <div class="entry-role">Advisor (Oct 2025 – Present) · Key Personnel (2023 – Sep 2025)</div>
+      <ul>
+        <li>Provide guidance on project planning, technical challenges and club management as Advisor.</li>
+        <li>Organised events including workshops, seminars and local hackathons; used technologies such as PyTorch and the LeRobot toolkit.</li>
+        <li>Worked on projects with Arduino and Raspberry Pi using Python and C.</li>
+        <li>Participated in open-source research for the Robot Study Companion (RSC) — Text-to-Speech / Speech-to-Text models.</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <!-- ── Education ─────────────────────────────────────────── -->
+  <section class="section">
+    <div class="section-title">Education</div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-org">University of Guyana</div>
+        <div class="entry-period">2021 – 2025</div>
+      </div>
+      <div class="entry-role">Bachelor of Science, Computer Science</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-org">Queen's College</div>
+        <div class="entry-period">2015 – 2020</div>
+      </div>
+      <div class="entry-role">CSEC — Caribbean Secondary Education Certificate</div>
+    </div>
+
+  </section>
+
+  <!-- ── Honours & Awards ─────────────────────────────────── -->
+  <section class="section">
+    <div class="section-title">Honours &amp; Awards</div>
+    <table class="awards-table">
+      <tr>
+        <td class="award-name">Best Student — Faculty of Natural Sciences</td>
+        <td class="award-period">2022 – 2023</td>
+      </tr>
+      <tr>
+        <td class="award-name">Second Best Student — Faculty of Natural Sciences</td>
+        <td class="award-period">2021 – 2022</td>
+      </tr>
+      <tr>
+        <td class="award-name">Office of the Prime Minister Innovation Challenge 2025 — 1st Place (Hackathon)</td>
+        <td class="award-period"></td>
+      </tr>
+      <tr>
+        <td class="award-name">Speaker — Local Climate Organization of Youth (LCOY)</td>
+        <td class="award-period"></td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- ── Skills ────────────────────────────────────────────── -->
+  <section class="section">
+    <div class="section-title">Skills &amp; Technologies</div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-label">Languages</div>
+        <div class="skill-values">Python, JavaScript / TypeScript, C, PHP, C#</div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-label">Web</div>
+        <div class="skill-values">Next.js, React, Laravel, .NET, Node.js</div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-label">ML / Data</div>
+        <div class="skill-values">PyTorch, NumPy, remote sensing, GIS</div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-label">Geospatial</div>
+        <div class="skill-values">QGIS, PostGIS, spatial data analysis</div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-label">Embedded</div>
+        <div class="skill-values">Arduino, Raspberry Pi, microcontrollers</div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-label">Tools</div>
+        <div class="skill-values">Linux, Git, Docker, Neovim, DevOps</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>

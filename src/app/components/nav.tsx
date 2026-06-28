@@ -22,6 +22,7 @@ export default function Nav() {
       <Link href="/projects" underline="hover" color="white">Projects</Link>
       <Link href="/organizations" underline="hover" color="white">Organizations</Link>
       <Link href="/blog" underline="hover" color="white">Blog</Link>
+      <Link href="/resume" underline="hover" color="white">Resume</Link>
     </Box>
   </>
 }

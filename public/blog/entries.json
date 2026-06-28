@@ -6,5 +6,13 @@
     "excerpt": "A sample blog post to get started with blogging.",
     "tags": ["getting-started", "sample"],
     "path": "/blog/entries/first-blog.html"
+  },
+  {
+    "id": "1",
+    "title": "Neural Networks From Scratch",
+    "date": "2026-06-28",
+    "excerpt": "A blog about my neural networks from scratch journey so  far",
+    "tags": ["deep learning"],
+    "path": "/blog/entries/neural-networks-from-scratch-1.html"
   }
 ]
