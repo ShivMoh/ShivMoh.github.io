@@ -195,7 +195,7 @@
             <h1 class="blog-title">Neural Networks From Scratch Part 1</h1>
             <div class="blog-meta">
                 <span>Jun 28, 2026</span>
-                <span>20 min read</span>
+                <span>7 min read</span>
             </div>
         </header>
 
@@ -248,13 +248,40 @@
                 The notebook I (claude) made can be found here: <a href="https://colab.research.google.com/drive/1qt8ylWP-iEhs8T6hKTb_PuAnLhjYQ3y-?usp=sharing">Simpliest Neural Network classifer</a>
             </p>
             <h2>Recreating it from scratch</h2>
-            <p>The code needed to this was a lot less than I thought</p>
+            <p>The code needed to this was a lot less than I thought. In general constructing neural networks, while I'm sure theoretically very complex
+                was quite straight forward once you get your head around it. The calculus and linear algebra needed is quite manageable and even if you don't
+                understand it that well (like I do :), black boxing helps if you simply just treat it as a function of sorts.
+            </p>
+            <p>
+                Starting with the basic Linear layer, all we have to do is just construct a forward pass and a backward pass.
+                The forward pass is just a matrix operation where dot the input matrix and the current weights for that layer.
+                And the backward pass is just that in reverse (using the magic of derivitives.).
+            </p>
+            <p>
+                Next up was the flatten layer, which really and truly just took a batch of images in some shape
+                and well, flattened it, meaning that instead of having an input of (64, 1, 28, 28), we get something like
+                (64, 728). Now do I really understand how that remains mathematically sound? By that, I mean, how does it
+                preserve all the previous information given the images, once in the shape of (1,28,28) are now simple (1, 728)?
+                My answer to that is I don't really know. One day I might look into it more but for now, its sufficient for me
+                to simply know that this puts the batch of images in a form that makes it convient for matrix multiplication with
+                the weights of the neural network. So then our neural network can be in the shape of something like
+                (728, 10) such that we can multiply the inputs by the weights to get the shape of (64, 10).
+            </p>
+            <p>
+                Next up was the basic and simpliest optimizer, Schothastic Gradient Descent (SGD). All this does
+                is simple takes a random step in some direction where the gradient is negative (that is, where the loss
+                is likely to be lower). Its very basic but it gets the job done. For the loss function we used the
+                Cross Entropy loss which is good for classification. And that's about it (or atleast all I'm writing about it for now).
+            </p>
+
+            <p>
+                Anyways, my implementation thus far for what's described can be found here. I made updates and will describe those as I continue building <a href="https://github.com/ShivMoh/neural_networks_from_scratch/commit/53f30c2b7e0df7fed04c55de2e066e2a75630dd6">Code at this point</a>
+            </p>
 
         </main>
 
         <div class="blog-tags">
-            <span class="blog-tag">getting-started</span>
-            <span class="blog-tag">sample</span>
+            <span class="blog-tag">deep-learning</span>
         </div>
     </div>
 </body>
