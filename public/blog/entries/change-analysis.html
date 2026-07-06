@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Blog Post | Shivesh Mohamed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Site palette — keep in sync with --background / --foreground / --accent */
+        :root {
+            --background: #1d1d1d;
+            --foreground: #ededed;
+            --ink-muted: #c4bfb6;
+            --accent: #7fb5f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Manrope', 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-weight: 500;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: var(--background);
+            color: var(--foreground);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .blog-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 5vh 2vw;
+        }
+
+        .blog-header {
+            margin-bottom: 3rem;
+        }
+
+        .blog-back-link {
+            color: var(--ink-muted);
+            text-decoration: none;
+            margin-bottom: 1rem;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        .blog-back-link:hover {
+            color: var(--accent);
+        }
+
+        .blog-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .blog-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            opacity: 0.7;
+            font-size: 0.95rem;
+        }
+
+        .blog-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .blog-content h2 {
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .blog-content h3 {
+            font-size: 1.4rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            font-weight: bold;
+        }
+
+        .blog-content p {
+            margin-bottom: 1rem;
+        }
+
+        .blog-content a {
+            color: var(--accent);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .blog-content code {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+        }
+
+        .blog-content pre {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin-bottom: 1rem;
+        }
+
+        .blog-content pre code {
+            background: none;
+            padding: 0;
+        }
+
+        .blog-content ul,
+        .blog-content ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-content blockquote {
+            border-left: 4px solid rgba(255, 255, 255, 0.3);
+            padding-left: 1rem;
+            margin-left: 0;
+            opacity: 0.8;
+            font-style: italic;
+        }
+
+        .blog-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .blog-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .blog-tag {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            opacity: 0.9;
+            transition: all 0.3s ease;
+        }
+
+        .blog-tag:hover {
+            background: rgba(255, 255, 255, 0.15);
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: 1.8rem;
+            }
+
+            .blog-content {
+                font-size: 1rem;
+            }
+
+            .blog-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-container">
+        <a href="/blog" class="blog-back-link">← Back to Blog</a>
+
+        <header class="blog-header">
+            <h1 class="blog-title">Introduction to Remote Sensing</h1>
+            <div class="blog-meta">
+                <span>Jun 28, 2026</span>
+                <span>7 min read</span>
+            </div>
+        </header>
+
+        <main class="blog-content">
+            <p>
+                For a couple of weeks now, I've been taking part in internal training at the Guyana Lands and Survey Commission
+                on Remote Sensing and its applications towards land admistration, particularly focusing on change analysis for land use.
+                I'm not at all that knowledgeable in the sciences for Geospatial Analsysis but I am interested in the application of
+                machine learning and computer vision so this training was pretty neat. I'm just gonna outline what I learnt on
+                land change analysis here.
+            </p>
+
+            <h2>Remote Sensing and Waves?</h2>
+            <p>Okay so here's my layman's understanding of remote sensing. There's two types, passive and active. Passive just
+                observes using energy around us, like sunlight and heat. They depend on external energy sources. Examples includes
+                cameras and radiometres. Active remote sensing on the other hand is well...drum roll...active, as in it <i>actively</i>
+                produces its own energy for its mystical magical remote sensing purposes. Examples include LiDAR (which I've recently been diving into
+                coincidently...but more on that some other time) and radar.
+
+                Other than that, there's the general concept that waves have different lenghts (highschool physics stuff) and surface properties
+                have different reflective / absorptive properties meaning how these waves interact with the on ground vegetation, land types
+                and what nots is important. And that for now, is all i really understand.
+                
+            </p>
+            <h2>How Cloud Free Mosaic's are formed</h2>
+            <p>Now this here was something I genuinely never thought about until this very point but from retrospect, of course this has to be the case.
+               So guess what, even with satellite imagery, most of the time there's lots and lots of cloud blocking the view of given areas. In 
+               the case of Guyana that almost always seems to be the case. 
+               
+               <img
+                src="https://cdn.star.nesdis.noaa.gov/GOES19/ABI/SECTOR/nsa/GEOCOLOR/20261871430_GOES19-ABI-nsa-GEOCOLOR-3600x2160.jpg"
+                title="Guyana Image date"/>
+               
+               So as we can see from the above...Guyana's can hardly be seen :). So how does one see the beautiful Guyana 
+               when viewing 'satellite' imagery in most online maps? Simple, you "lie". So basically how it works is that
+               over a given time period, your prase through satellite imagery data and extract the little bits that don't
+               have cloud coverage and you do that over a long enough period until you get a stitched together image of what
+               is a 'cloud free' version of you area of interest.
+              
+              </p>
+            <h2>Creating a Cloud Free Mosaic in Google Earth</h2>
+            <p>The code for this can be found at <a href="https://code.earthengine.google.com/664d5e74af3ce4545ec733c78af406aa">Cloud free Mosaic code</a>
+            But honestly for most of our sessions, we utilised google gemini which worked for most cases. So something along the lines of "I'm making a 
+            cloud free mosaic for *insert country*, please give me the code to do this in google earth" should do the trick, more or less. 
+
+            Anyways I'm now going to 'attempt' to explain the nitbits in the code. I would've done some refactoring and made some little changes
+            here and there to the original code that gemeni popped out. A bit of important bit is that we're only doing this for a defined
+            area of interest in google earth, mostly cuz of on a free plan, we would not have enough compute to do the whole of Guyana :( . so do
+            keep that in mind
+<pre><code>function maskS2clouds(image) {
+  var opaque = image.select('MSK_CLASSI_OPAQUE');
+  var cirrus = image.select('MSK_CLASSI_CIRRUS');
+  var mask = opaque.eq(0).and(cirrus.eq(0));
+  return image.updateMask(mask).divide(10000);
+}
+</code></pre>
+
+            So the code above more or less just selects the individual bits that correspond the features labeled as clouds.
+            If you go through the documentation <a href="https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR_HARMONIZED">here</a>, you'll see more details.
+            But basically, the people that made the dataset already created identifiers so we can select it from the region.
+            So all the above function does really is select the areas that don't have those clouds, that is where the values 
+            equal 0 (meaning no clouds!)
+<pre><code>
+// just a helper function for creating a colection
+function create_collection(date_start, date_end) {
+  var sentinelCollection = ee.ImageCollection('COPERNICUS/S2_SR_HARMONIZED')
+  .filterBounds(guyana) // filter to guyana
+  .filterDate(date_start, date_end) // filter between the set date periods
+  .filter(ee.Filter.lt('CLOUDY_PIXEL_PERCENTAGE', 80)) // filter based on acceptable level of cloudiness
+  .map(maskS2clouds);
+  return sentinelCollection;
+  
+}
+
+// create a mosaic based on median values
+function create_mosaic(collection, area) {
+  var median_mosaic = collection.median();
+  return median_mosaic.clip(area);
+}
+</code></pre>
+        So the first function in the snipper above just creates and image collection based on a bunch of filters.
+        The important one is the <code>filter(ee.Filter.lt('CLOUD_PIXEL_PERCENTAGE', 80))</code> which sets the threshold of
+        what level of 'cloudiness' is acceptable to us. Making the percentage lower in our case, would mean
+        we tolerate less cloudiness.
+
+        And the second function is just creating the mosaic based on our collection and clipping it to our defined area.
+
+<pre><code>
+// create the collection
+var sentinelCollection = create_collection('2025-01-01', '2025-12-31');
+
+// create the mosaic
+var guyanaCleanMosaic = create_mosaic(sentinelCollection, guyana);
+
+// visual parameters
+var visParams = {
+  bands: ['B8', 'B4', 'B3'],
+  min: 0.0,
+  max: 0.2
+
+// add to map
+Map.addLayer(guyanaCleanMosaic, visParams, 'Guyana Cloud-Free S2A/S2B Mosaic (2025)');
+</code></pre>
+
+        And that's about it really. Mosaic should be created.
+        <img src="./cloud_free_mosaic.png" title="Cloud Free Mosaic" />
+        </p>
+
+
+        </main>
+
+        <div class="blog-tags">
+            <span class="blog-tag">deep-learning</span>
+        </div>
+    </div>
+</body>
+</html>

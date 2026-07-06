@@ -14,5 +14,13 @@
     "excerpt": "A blog about my neural networks from scratch journey so  far",
     "tags": ["deep learning"],
     "path": "/blog/entries/neural-networks-from-scratch-1.html"
+  },
+  {
+    "id": "2",
+    "title": "Intro to Remote Sensing with Google Earth",
+    "date": "2026-07-06",
+    "excerpt": "My learnings and notes on my introduction to remote sensing with google earth",
+    "tags": ["deep learning"],
+    "path": "/blog/entries/change-analysis.html"
   }
 ]

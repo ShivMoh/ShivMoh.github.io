@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Manrope } from "next/font/google";
 import "./globals.css";
 import "./landing.scss";
@@ -43,11 +43,41 @@ export const metadata: Metadata = {
     description: "Full-stack developer passionate about web development, machine learning, and game development.",
   },
   robots: "index, follow",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Shivesh Mohamed",
+  url: "https://shivmoh.github.io",
+  jobTitle: "Software Engineer",
+  worksFor: {
+    "@type": "Organization",
+    name: "Guyana Lands and Survey Commission",
   },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Georgetown",
+    addressRegion: "Demerara-Mahaica",
+    addressCountry: "GY",
+  },
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: "University of Guyana",
+  },
+  knowsAbout: [
+    "Web Development", "Machine Learning", "Deep Learning",
+    "Geospatial Systems", "Python", "TypeScript", "Next.js",
+  ],
+  sameAs: [
+    "https://www.linkedin.com/in/shivesh-mohamed/",
+  ],
 };
 
 export default function RootLayout({
@@ -58,6 +88,12 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} ${manrope.variable} landing-root`} >
         {/*<BackgroundFX />*/}
         <Nav />
