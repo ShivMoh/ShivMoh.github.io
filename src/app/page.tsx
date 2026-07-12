@@ -22,18 +22,34 @@ export default function Page() {
           <h1 className="name">Shivesh Mohamed</h1>
           <p className="role">Software Developer & Engineer</p>
           <p className="pitch">
-            I'm a software engineer interested in deep learning and web development. I like learning new things and exploring new domains. Software being widely applicable to all fields allows me to explore different domains from that perspective, which is why I think it's neat. I've also recently become fascinated by the field of what I've come to know as 'Efficient Deep Learning'.  Learning how to use deep learning to have computers solve complex, unstructured tasks that otherwise would be difficult for conventional algorithms reveals a whole new world of tools for solving problems. But in the real world, compute is limited and costly which makes it important for deployment to reduce model footprints, hence the 'efficient' part of 'efficient deep learning'. It's a sub-field that takes into consideration real-world deployment and use which is likely why I'm drawn to it. I don't just want AI to become smarter, I'd like for it to be cost-effective and feasible as well.
-          </p>
-          <br />
-          <p className="pitch">
-            Currently reading <a href="https://efficientdlbook.com/">Efficient deep learning</a>. as well as  
-            <a href="https://nnfs.io/">Neural networks from scratch</a> whilest building my own little neural network project where I hope to implement some of those efficient techniques to better understand them.
-          </p>
-          <br />
+            I'm a software engineer interested in deep learning and web development. I like learning new things and exploring
+            new domains. Software being widely applicable to all fields allows me to explore different domains from that perspective,
+            which is why I think it's neat. I'm a builder and I like learning about things through those lens. Professionally,
+            I'm a backend engineer (though I often end up doing both frontend and backend due to small team sizes). I've also
+            dabled in game development and machine learning (mostly deep learning).
 
+            <br /><br />
+
+            My research interests revolve around efficient deep learning. My bachelor's thesis was mostly about
+            deploying small language models with quantization on consumer hardware.
+
+            I'm also currently building <b>Road Sense</b> and <b>R.O.O.A.D</b> for my startup <a href="https://imatakatechnologies.com" target="_blank">ImatakaTech</a>
+          </p>
           <div className="cta-row">
             <Link href="/gallery" className="text-link">View Gallery</Link>
             <Link href="/projects" className="text-link">View Projects</Link>
+            <a
+              href="https://www.linkedin.com/in/shivesh-mohamed-95981b234/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-link"
+            >LinkedIn ↗</a>
+            <a
+              href="https://github.com/ShivMoh"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-link"
+            >GitHub ↗</a>
           </div>
         </div>
       </div>
