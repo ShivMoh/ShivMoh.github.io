@@ -37,7 +37,6 @@ export default function Page() {
           </p>
           <div className="cta-row">
             <Link href="/gallery" className="text-link">View Gallery</Link>
-            <Link href="/projects" className="text-link">View Projects</Link>
             <a
               href="https://www.linkedin.com/in/shivesh-mohamed-95981b234/"
               target="_blank"
