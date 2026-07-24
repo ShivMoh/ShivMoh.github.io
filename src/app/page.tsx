@@ -30,10 +30,7 @@ export default function Page() {
 
             <br /><br />
 
-            My research interests revolve around efficient deep learning. My bachelor's thesis was mostly about
-            deploying small language models with quantization on consumer hardware.
-
-            I'm also currently building <b>Road Sense</b> and <b>R.O.O.A.D</b> for my startup <a href="https://imatakatechnologies.com" target="_blank">ImatakaTech</a>
+            <h2><i>"Its not about whether its impossible or not, I'm doing it because I want to" </i>- Monkey D Luffy, Future King of the Pirates</h2>
           </p>
           <div className="cta-row">
             <Link href="/gallery" className="text-link">View Gallery</Link>
@@ -49,6 +46,12 @@ export default function Page() {
               rel="noopener noreferrer"
               className="text-link"
             >GitHub ↗</a>
+            <a
+              href="https://www.imatakatechnologies.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-link"
+            >ImatakaTech</a>
           </div>
         </div>
       </div>
