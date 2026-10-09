@@ -2,7 +2,23 @@
 
 Welcome to your blog system! Here's how to add and manage blog posts.
 
-## Quick Start
+## Studio (in-browser editor)
+
+The easiest way to write posts is the hidden editor at **`/private/studio`**. It edits raw HTML with a live preview,
+uploads media, and publishes by committing straight to `main` (which triggers the Pages deploy).
+
+**Login**: the password is checked against the bcrypt hash in `src/app/private/studio/auth.ts`
+(swap `PASSWORD_HASH` to change it). A session cookie lasts 1 hour.
+
+**Publishing** needs a fine-grained GitHub token (https://github.com/settings/personal-access-tokens/new —
+only the `ShivMoh.github.io` repo, *Contents → Read and write*). Paste it at your first login on a browser;
+it's kept in that browser's localStorage, never in the code.
+
+**Images**: the toolbar's **Library** button opens a media library — upload files (committed immediately to
+`public/blog/media/`), search existing ones, and click to insert or copy the link (e.g. `/blog/media/photo.png`).
+**+ Media** instead attaches files to the current post; they upload with it on publish to `public/blog/media/<slug>/`.
+
+## Manual Quick Start
 
 ### Adding a New Blog Post
 
