@@ -4,7 +4,10 @@
     "title": "My First Blog Post",
     "date": "2024-05-18",
     "excerpt": "A sample blog post to get started with blogging.",
-    "tags": ["getting-started", "sample"],
+    "tags": [
+      "getting-started",
+      "sample"
+    ],
     "path": "/blog/entries/first-blog.html"
   },
   {
@@ -12,7 +15,9 @@
     "title": "Neural Networks From Scratch",
     "date": "2026-06-28",
     "excerpt": "A blog about my neural networks from scratch journey so  far",
-    "tags": ["deep learning"],
+    "tags": [
+      "deep learning"
+    ],
     "path": "/blog/entries/neural-networks-from-scratch-1.html"
   },
   {
@@ -20,7 +25,21 @@
     "title": "Intro to Remote Sensing with Google Earth",
     "date": "2026-07-06",
     "excerpt": "My learnings and notes on my introduction to remote sensing with google earth",
-    "tags": ["deep learning"],
+    "tags": [
+      "deep learning"
+    ],
     "path": "/blog/entries/change-analysis.html"
+  },
+  {
+    "id": "innovation-challenge-2026",
+    "title": "The 2026 Innovation Challenge and SkillTree",
+    "date": "2026-10-09",
+    "excerpt": "",
+    "tags": [
+      "hackathon",
+      "sbm-offshore",
+      "office-of-the-prime-minister"
+    ],
+    "path": "/blog/entries/innovation-challenge-2026.html"
   }
 ]
