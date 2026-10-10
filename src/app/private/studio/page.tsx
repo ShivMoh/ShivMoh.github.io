@@ -7,6 +7,7 @@ import { applyMeta, getBody, hasBody, setBody, slugify } from "./post"
 import { POST_TEMPLATE } from "./post-template"
 import { MAX_UPLOAD_BYTES, mediaSnippet, safeName } from "./media"
 import MediaLibrary from "./media-library"
+import GalleryManager from "./gallery-manager"
 import "./studio.scss"
 
 const DRAFT_KEY = "studio-draft"
@@ -160,6 +161,7 @@ export default function StudioPage() {
   const [busy, setBusy] = useState(false)
   const [preview, setPreview] = useState("")
   const [libraryOpen, setLibraryOpen] = useState(false)
+  const [tab, setTab] = useState<"blog" | "gallery">("blog")
 
   const textareaRef = useRef<HTMLTextAreaElement>(null)
   const iframeRef = useRef<HTMLIFrameElement>(null)
@@ -464,6 +466,11 @@ export default function StudioPage() {
       {!session && <Login expired={expired} onLogin={s => { setSession(s); setExpired(false) }} />}
 
       <aside className="studio-sidebar">
+        <div className="studio-seg studio-tabs">
+          <button className={tab === "blog" ? "on" : ""} onClick={() => setTab("blog")}>Blog</button>
+          <button className={tab === "gallery" ? "on" : ""} onClick={() => setTab("gallery")}>Gallery</button>
+        </div>
+        {tab === "blog" && <>
         <button className="studio-primary" onClick={startNew}>+ New post</button>
         <h2>Posts</h2>
         <ul>
@@ -480,13 +487,17 @@ export default function StudioPage() {
             </li>
           ))}
         </ul>
+        </>}
+        {tab === "gallery" && <div className="studio-sidebar-spacer" />}
         <button className="studio-link" onClick={signOut}>Log out</button>
         <button className="studio-link" onClick={() => { if (confirm("Remove the saved GitHub token from this browser?")) { forgetToken(); signOut() } }}>
           Forget GitHub token
         </button>
       </aside>
 
-      <section className="studio-main">
+      {tab === "gallery" && session && <GalleryManager token={session.token} />}
+
+      <section className="studio-main" hidden={tab !== "blog"}>
         <div className="studio-meta">
           <label className="wide">
             Title

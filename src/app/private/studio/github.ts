@@ -33,6 +33,10 @@ async function gh<T>(token: string, path: string, init: RequestInit = {}, accept
   })
   if (!res.ok) {
     const body = await res.text()
+    if (res.status === 401) throw new Error("GitHub rejected the token (expired or revoked). Use “Forget GitHub token” and log in with a new one.")
+    if (res.status === 403 && body.includes("not accessible by personal access token")) {
+      throw new Error(`Your GitHub token can't write to ${REPO}. Edit it at github.com/settings/personal-access-tokens: Repository access → only ${REPO}, Contents → Read and write.`)
+    }
     throw new Error(`GitHub ${res.status}: ${body.slice(0, 300)}`)
   }
   return (accept.includes("raw") ? res.text() : res.json()) as Promise<T>
