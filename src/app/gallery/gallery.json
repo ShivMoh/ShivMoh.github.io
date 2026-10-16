@@ -1,5 +1,25 @@
 [
   {
+    "img": "/gallery-images/itech.jpeg",
+    "title": "Itech"
+  },
+  {
+    "img": "/gallery-images/itech2.jpeg",
+    "title": "Itech2"
+  },
+  {
+    "img": "/gallery-images/itech-group.jpg",
+    "title": "Itech Group"
+  },
+  {
+    "img": "/gallery-images/itech-trophy.jpg",
+    "title": "Itech Trophy"
+  },
+  {
+    "img": "/gallery-images/itech-group-2.jpg",
+    "title": "Itech Group 2"
+  },
+  {
     "img": "/girls_in_tech.jpeg",
     "title": "Girls In Tech Event"
   },
