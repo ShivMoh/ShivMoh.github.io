@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 2026 Innovation Challenge and SkillTree | Shivesh Mohamed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Site palette — keep in sync with --background / --foreground / --accent */
+        :root {
+            --background: #1d1d1d;
+            --foreground: #ededed;
+            --ink-muted: #c4bfb6;
+            --accent: #7fb5f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Manrope', 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-weight: 500;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: var(--background);
+            color: var(--foreground);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .blog-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 5vh 2vw;
+        }
+
+        .blog-header {
+            margin-bottom: 3rem;
+        }
+
+        .blog-back-link {
+            color: var(--ink-muted);
+            text-decoration: none;
+            margin-bottom: 1rem;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        .blog-back-link:hover {
+            color: var(--accent);
+        }
+
+        .blog-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .blog-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            opacity: 0.7;
+            font-size: 0.95rem;
+        }
+
+        .blog-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .blog-content h2 {
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .blog-content h3 {
+            font-size: 1.4rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            font-weight: bold;
+        }
+
+        .blog-content p {
+            margin-bottom: 1rem;
+        }
+
+        .blog-content a {
+            color: var(--accent);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .blog-content code {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+        }
+
+        .blog-content pre {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin-bottom: 1rem;
+        }
+
+        .blog-content pre code {
+            background: none;
+            padding: 0;
+        }
+
+        .blog-content ul,
+        .blog-content ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-content blockquote {
+            border-left: 4px solid rgba(255, 255, 255, 0.3);
+            padding-left: 1rem;
+            margin-left: 0;
+            opacity: 0.8;
+            font-style: italic;
+        }
+
+        .blog-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .blog-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .blog-tag {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            opacity: 0.9;
+            transition: all 0.3s ease;
+        }
+
+        .blog-tag:hover {
+            background: rgba(255, 255, 255, 0.15);
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: 1.8rem;
+            }
+
+            .blog-content {
+                font-size: 1rem;
+            }
+
+            .blog-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-container">
+        <a href="/blog" class="blog-back-link">← Back to Blog</a>
+
+        <header class="blog-header">
+            <h1 class="blog-title">The 2026 Innovation Challenge and SkillTree</h1>
+            <div class="blog-meta">
+                <span>Oct 9, 2026</span>
+                <span>6 min read</span>
+            </div>
+        </header>
+
+        <main class="blog-content">
+
+<h2>Thoughts and Reflections</h2><figure>
+  <img src="/blog/media/the-2026-innovation-challenge-and-skilltree/itech.jpeg" alt="">
+  <figcaption></figcaption>
+</figure>
+
+<p>Late random blog post, but I participated again in the 2026 Innovation Challenge hosted
+by the Office of the Prime Minister in collaboration with SBM Offshore. I had participated
+last year as part of FramePerfect Lite and won with our solution Minerva, but to be honest,
+I more or less followed directions that time. I didn't feel as though I was able to really
+help shape the solution into what it was, so while I did win, it didn't really feel like my win.
+</p>
+
+<p>This year was different. I wasn't gonna be hard carried by experienced devs, and I was supposed
+to play the part of the team leader. Our team was ITech (abbreviated from Imataka with I, find out
+more here: <a href='https://www.imatakatech.com/'>ImatakaTech</a>). Our team had four members:
+Reynard Etwaroo, Ezra Minty, Clarence Lucius, and myself.</p>
+
+<h2>Crafting the initial Idea</h2>
+
+<p>Any whos, back to the meat and potatoes. The premise this year was pretty vague, likely
+due to agentic coding being very good at this point. So the question posed to us was: "How might technology
+help Guyanese citizens acquire the skills needed for careers in the rapidly growing energy industry?"</p>
+
+<p>At first, I kept thinking of how to go about addressing this. I was at work, so I spent the first day
+just brainstorming until I reached what was probably the obvious solution, that being, a recommender service.
+There was already tons of stuff out there in terms of actual content, such as CourseraXGoal and
+free tertiary education for Guyanese students. But still, I didn't think this was enough. And it was obvious.
+I remember that one of my previous teammates, Andrew, from FramePerfect Lite hinted at the same
+premise for the solution (we work together at GLSC). Soo, yh, it was the obvious direction to go in,
+but that didn't mean it was wrong. I did have a call with my teammates, and we decided to go along with it.</p>
+
+<p>Anyways, fast forward, I get there, the team starts working, and we're out here cooking. Day one ended
+with us just getting the solution up. Reynard and I, both avid Obsidian users, both would've
+immediately jumped on the visualization angle of skills using graphs and showing that as a way
+to see where you stand in terms of development. Ezra was building out the service layer for actually
+taking in a resume and recommending skills. Clarence was tasked with doing foresight prediction
+for jobs and skills, something I told him to look into without thinking much, but it became
+important down the line. But the graphs were the thing that really sold the concept of our solution.</p>
+
+<h2>Differentiating the solution, Killing the Competition</h2>
+
+<p>I don't remember the exact sequence of events. This might've been on the first night or the second night.
+I'm not sure which. But I kept thinking of how to differentiate the solution. And I thought of how
+I could find a unique angle to poke at the problem statement. So I thought about my own life,
+and what I'm bad at and what has helped me... networking. I suck at networking, and I'm really bad,
+but it's also what helped me get certain jobs here in Guyana. <i>Especially</i> in Guyana, having the
+right <i>links</i> here is almost everything.</p>
+
+<p>So I broke down how to go forward, and I was explaining it to Reynard. One problem of the premise
+was "How might technology help..." Guyanese acquire the skills they need for energy sector careers,
+but it was leading somewhat that getting the skills was enough to enter the energy sector. It is not.
+Having a connection and getting in front of the right people is the other, arguably more important, aspect.
+There are, in my opinion, a lot of people in the high-paying energy sector that probably aren't the best but
+still they are "good enough," and they knew the right people. So there's that.</p>
+
+<p>Anyways, as to how we show that in our solution, simple really. LinkedIn integrations as a graph
+and event notifications, pulled straight from Facebook. And that's it really. The rest was just
+selling that aspect of it and visualizing the skills someone in the field has vs. what you have.</p>
+
+<p>The other thing which our solution lacked... and which we had thought of before was VR/AR
+practical training solutions. I did notice one or two teams going along that direction, so it did
+worry me a little that this was something we could've done as well. But the obvious thing about
+this was that creating VR/AR simulations for practical training was not very scalable, and importantly,
+there were already solutions out there... so my answer to this was simple. Our system already simply
+analyzed your resume, pulled your skills, looked at the job you want, pulled skills from there, and then finally
+found the difference and recommended courses based on that. Courses at this point were being pulled
+from Coursera, University of Guyana, and more. But to explicitly compete with practical training
+simulations, we added some other platforms such as InteractPlay, which explicitly focused on courses
+along those lines. And we would make this a point in our pitch: we're the facilitator. This
+made our solution all-encompassing but also very scalable since we don't have to bother
+with creating the platforms ourselves.</p>
+
+<h2>The Pitch</h2>
+
+<p>Day 3, we were done mostly. We spent the early morning practicing our pitch. Our solution was crafted.
+And when the time was right, it was to just go out there. And we did, and we did good. And previous teammates,
+Shomari (also my previous supervisor at UG) and Andrew, came to see us present. And judges aside,
+they were impressed. At this point, we didn't know that we had won as yet, but that was a win in my book.</p>
+
+<p>The rest of the day went by, the closing ceremony came by. They started announcing the winners.</p>
+
+<p>Third place went to GStack (checks out).</p>
+
+<p>Second place went to LudgeTech (strange but okay...).</p>
+
+<p>And...</p>
+
+<p>First place... ITech! (We won!)</p>
+
+<p>And that was that. The end.</p>
+
+<figure>
+  <img src="/blog/media/the-2026-innovation-challenge-and-skilltree/itech-trophy.jpg" alt="">
+  <figcaption>Us Collecting the Award</figcaption>
+</figure>
+<figure>
+  <img src="/blog/media/the-2026-innovation-challenge-and-skilltree/itech-group-2.jpg" alt="">
+  <figcaption>Group photo with important people</figcaption>
+</figure>
+
+<figure>
+  <img src="/blog/media/the-2026-innovation-challenge-and-skilltree/itech.jpeg" alt="">
+  <figcaption>Just More of us being happy</figcaption>
+</figure>
+
+<h2>Thoughts and Reflections</h2>
+<p>I was happy that I won, but same as with last time, it was momentary. I'm glad my solution won. The biggest
+thing for me was that it proved my ideas had value. But I think when it comes to tech,
+competitions are easy. They're just playgrounds. Once you know the right things to say,
+and the right way to do things, it just becomes obvious how to go about it. It's not a
+guarantee, but it's a controlled environment. What I want next is to actually put something out
+there and try to get people to actually use it. I think that's the real test for whether something
+works or not. Soo, with that said, we're still developing Skill Tree. You can find it at
+<a href='https://skilltree.gy/'>skilltree.gy</a>.</p>
+
+
+
+        </main>
+
+        <div class="blog-tags">
+            <span class="blog-tag">hackathon</span>
+            <span class="blog-tag">sbm-offshore</span>
+            <span class="blog-tag">office-of-the-prime-minister</span>
+        </div>
+    </div>
+</body>
+</html>
